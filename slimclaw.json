@@ -1,0 +1,30 @@
+{
+  "model": "gpt-4o",
+  "apiKey": "",
+  "maxTokens": 4096,
+  "port": 3000,
+  "host": "127.0.0.1",
+  "maxHistoryTurns": 50,
+  "maxToolResultChars": 100000,
+  "skillsDir": "./skills",
+  "mcp": {
+    "servers": {
+      "everything": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-everything"]
+      },
+      "deepwiki": {
+        "url": "https://mcp.deepwiki.com/mcp"
+      },
+      "domains": {
+        "url": "https://api.findadomain.dev/mcp"
+      }
+    }
+  },
+  "memoryDir": "./memory",
+  "memoryFile": "MEMORY.md",
+  "heartbeat": {
+    "enabled": false,
+    "intervalMinutes": 30
+  }
+}
